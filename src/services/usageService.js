@@ -13,7 +13,8 @@ function getCustomer(customerId) {
 function filterByDateRange(readings, from, to) {
   return readings.filter((r) => {
     if (from && r.periodStart < from) return false;
-    if (to && r.periodStart >= to) return false;
+    // "to" is inclusive: a customer asking for usage up to October expects October.
+    if (to && r.periodStart > to) return false;
     return true;
   });
 }
