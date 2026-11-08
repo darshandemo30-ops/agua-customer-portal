@@ -1,0 +1,27 @@
+{
+  "name": "agua-customer-portal",
+  "version": "0.1.0",
+  "description": "Demo repository for the Agua Customer Portal Phase 1 delivery workflow, connected to ClickUp for product-to-engineering execution visibility.",
+  "main": "src/server.js",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --ci",
+    "lint": "eslint src tests"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "UNLICENSED"
+}
