@@ -33,3 +33,4 @@ npm start   # http://localhost:3000/health
 | Method | Path | Description |
 |---|---|---|
 | GET | `/health` | Service health check |
+| GET | `/api/customers/:customerId/usage?from=&to=` | Current and historical water usage, average and unusual-usage periods. Try `RES-10042`. |
