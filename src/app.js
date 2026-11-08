@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const usageRoutes = require('./routes/usage');
 
 function createApp() {
   const app = express();
@@ -13,6 +14,7 @@ function createApp() {
   // Feature routes are registered here as they are delivered.
   // Phase 1 backlog: usage dashboard, subscriptions, support requests,
   // service ticket tracking, product documentation.
+  app.use('/api', usageRoutes);
 
   app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
